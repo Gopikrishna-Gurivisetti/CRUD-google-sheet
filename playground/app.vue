@@ -128,6 +128,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
+import { useFetch } from "#imports";
 const tableHeaders = ref([]);
 const formData = ref({
   id: "",
@@ -150,7 +151,7 @@ const readFormData = async () => {
   }
 };
 const submitForm = async () => {
-  const response = await $fetch("https://sheetdb.io/api/v1/7e1qtstut00nn", {
+  const response = await useFetch("https://sheetdb.io/api/v1/7e1qtstut00nn", {
     method: "POST",
     body: {
       id: formData.value.id,
@@ -172,12 +173,11 @@ const crudOperations = async (button: any, person: any) => {
     if (data) {
       let readingDetails = [];
       readingDetails = data.data.value;
-      console.log(":::readingDetails", readingDetails);
       formData.value = readingDetails[0];
       disableButton.value = true
     }
   } else if (button === "Update") {
-    const response = await $fetch(
+    const response = await useFetch(
       `https://sheetdb.io/api/v1/7e1qtstut00nn/name/${person.name}`,
       {
         method: "PATCH",
@@ -198,7 +198,7 @@ const crudOperations = async (button: any, person: any) => {
       disableButton.value = false
     }
   } else {
-    const response = await $fetch(
+    const response = await useFetch(
       `https://sheetdb.io/api/v1/7e1qtstut00nn/name/${person.name}`,
       {
         method: "DELETE",
