@@ -22,10 +22,10 @@ My new Nuxt module for doing amazing things.
 
 ## Features
 
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- Add new employee details (Create)
+- View existing employee details (Read)
+- Update existing employee details (Update)
+- Delete employee records (Delete)
 
 ## Quick Setup
 
@@ -36,6 +36,22 @@ npx nuxi module add my-module
 ```
 
 That's it! You can now use My Module in your Nuxt app ✨
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Gopikrishna-Gurivisetti/CRUD-google-sheet.git
+
+cd employee-management-system
+
+npm install
+
+npm run dev
+
+```
+
 
 
 ## Contribution
