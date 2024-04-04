@@ -77,11 +77,11 @@
             <th
               v-for="head in tableHeaders"
               :key="head"
-              class="px-3 py-1 bg-cyan-700 text-white"
+              class="px-3 py-2 bg-cyan-700 text-white"
             >
               {{ head }}
             </th>
-            <th class="px-3 py-1 bg-cyan-700 text-white">CRUD</th>
+            <th class="px-3 py-2 bg-cyan-700 text-white">CRUD</th>
           </tr>
         </thead>
         <tbody>
